@@ -1,0 +1,21 @@
+[phases.setup]
+nixPkgs = ['nodejs', 'npm']
+
+[phases.install]
+cmds = [
+    'mkdir -p bootstrap/cache storage/logs storage/framework/cache/data storage/framework/sessions storage/framework/testing storage/framework/views',
+    'chmod -R 755 bootstrap/cache storage',
+    'composer install --no-dev --optimize-autoloader --ignore-platform-reqs',
+    'npm ci --only=production'
+]
+
+[phases.build]
+cmds = [
+    'npm run build',
+    'php artisan config:cache',
+    'php artisan route:cache',
+    'php artisan view:cache'
+]
+
+[start]
+cmd = 'php artisan serve --host=0.0.0.0 --port=$PORT'
