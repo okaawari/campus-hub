@@ -111,6 +111,41 @@ Campus Hub is a modern web application built with Laravel that empowers students
 
 Visit `http://localhost:8000` to see Campus Hub in action!
 
+## 🚀 Production Deployment
+
+Campus Hub is production-ready! Check out our comprehensive deployment guide:
+
+### Quick Deploy Options
+
+**🐳 Docker (Recommended)**
+```bash
+docker-compose up -d
+```
+
+**☁️ Cloud Platforms**
+- **Heroku**: One-click deploy with Heroku button
+- **DigitalOcean**: App Platform deployment
+- **AWS**: EC2 + RDS deployment
+- **Vercel**: Serverless deployment
+
+**🖥️ Traditional Server**
+```bash
+# Run automated deployment script
+./deploy.sh  # Linux/macOS
+./deploy.ps1 # Windows
+```
+
+📖 **[Complete Deployment Guide](DEPLOYMENT.md)** - Detailed instructions for all deployment scenarios
+
+### Deployment Features
+- ✅ **Automated deployment scripts** (Bash & PowerShell)
+- ✅ **Docker containerization** with multi-stage builds
+- ✅ **CI/CD pipeline** with GitHub Actions
+- ✅ **Production optimizations** (caching, asset compression)
+- ✅ **Security hardening** (HTTPS, headers, permissions)
+- ✅ **Database migrations** and seeding
+- ✅ **Zero-downtime deployments**
+
 ## 🏗️ Technology Stack
 
 ### Backend
