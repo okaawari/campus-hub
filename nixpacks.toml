@@ -1,5 +1,8 @@
 [phases.setup]
-nixPkgs = ['nodejs']
+nixPkgs = ['nodejs', 'php82', 'php82Packages.composer', 'php82Extensions.mbstring', 'php82Extensions.xml', 'php82Extensions.curl', 'php82Extensions.zip', 'php82Extensions.pdo_mysql', 'php82Extensions.mysqli']
+
+[variables]
+DB_CONNECTION = 'mysql'
 
 [phases.install]
 cmds = [
@@ -20,3 +23,6 @@ cmds = [
 
 [start]
 cmd = 'php artisan serve --host=0.0.0.0 --port=$PORT'
+
+[deploy]
+startCommand = "php artisan migrate --force && php artisan db:seed --force && php artisan serve --host=0.0.0.0 --port=$PORT"

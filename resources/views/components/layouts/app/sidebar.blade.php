@@ -60,6 +60,15 @@
                 </flux:navlist.group>
             </flux:navlist>
 
+            <!-- Theme Toggle -->
+            <div class="px-3 py-2">
+                <div class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-2">{{ __('Theme') }}</div>
+                <flux:radio.group x-data variant="segmented" x-model="$flux.appearance" class="w-full">
+                    <flux:radio value="light" icon="sun" class="flex-1 text-xs">{{ __('Light') }}</flux:radio>
+                    <flux:radio value="dark" icon="moon" class="flex-1 text-xs">{{ __('Dark') }}</flux:radio>
+                </flux:radio.group>
+            </div>
+
             <!-- Desktop User Menu -->
             <flux:dropdown class="hidden lg:block" position="bottom" align="start">
                 <flux:profile
@@ -153,6 +162,18 @@
                     <flux:menu.radio.group>
                         <flux:menu.item :href="route('settings.profile')" icon="cog" wire:navigate>{{ __('Settings') }}</flux:menu.item>
                     </flux:menu.radio.group>
+
+                    <flux:menu.separator />
+
+                    <!-- Mobile Theme Toggle -->
+                    <div class="px-3 py-2">
+                        <div class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-2">{{ __('Theme') }}</div>
+                        <flux:radio.group x-data variant="segmented" x-model="$flux.appearance" class="w-full">
+                            <flux:radio value="light" icon="sun" class="flex-1 text-xs">{{ __('Light') }}</flux:radio>
+                            <flux:radio value="dark" icon="moon" class="flex-1 text-xs">{{ __('Dark') }}</flux:radio>
+                            <flux:radio value="system" icon="computer-desktop" class="flex-1 text-xs">{{ __('Auto') }}</flux:radio>
+                        </flux:radio.group>
+                    </div>
 
                     <flux:menu.separator />
 

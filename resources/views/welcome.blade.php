@@ -305,28 +305,6 @@
         </div>
     </section>
 
-    <!-- Interactive Testimonial -->
-    <section class="bg-gradient-to-br from-primary-600 to-purple-700 py-24">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center text-white">
-                <div class="text-8xl mb-8 animate-pulse-slow">💬</div>
-                <div class="testimonial-carousel">
-                    <div class="testimonial-slide active bg-white/10 backdrop-blur-sm p-12 rounded-3xl">
-                        <blockquote class="text-3xl font-light italic mb-8 leading-relaxed">
-                            "Campus Hub helped me save over $400 on textbooks this semester and connected me with the most amazing study groups. My GPA improved by 0.7 points!"
-                        </blockquote>
-                        <cite class="text-xl font-semibold text-yellow-300">Sarah M., Computer Science</cite>
-                    </div>
-                </div>
-                <div class="flex justify-center space-x-3 mt-8">
-                    <button class="testimonial-dot active w-3 h-3 rounded-full bg-white"></button>
-                    <button class="testimonial-dot w-3 h-3 rounded-full bg-white/50"></button>
-                    <button class="testimonial-dot w-3 h-3 rounded-full bg-white/50"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Technology Stack -->
     <section id="tech" class="bg-gray-50 py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

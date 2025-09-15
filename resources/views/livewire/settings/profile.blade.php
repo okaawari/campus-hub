@@ -158,15 +158,7 @@ new class extends Component {
 
             <!-- Preferences -->
             <div class="space-y-4">
-                <h3 class="text-lg font-semibold text-neutral-900 dark:text-white border-b pb-2">Preferences</h3>
-                
-                <flux:radio.group wire:model="preferred_contact" :label="__('Preferred Contact Method')">
-                    <flux:radio value="email">Email only</flux:radio>
-                    <flux:radio value="phone">Phone only</flux:radio>
-                    <flux:radio value="both">Both email and phone</flux:radio>
-                </flux:radio.group>
-
-                <flux:checkbox wire:model="profile_visibility" :label="__('Make my profile visible to other students')" />
+                <flux:checkbox wire:model.live="profile_visibility" :label="__('Make my profile visible to other students')" />
             </div>
 
             <div class="flex items-center gap-4 pt-4">
